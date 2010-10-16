@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BAA8A224-D316-4DA5-8F11-4FFC5DBC1058}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <OutDir>$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <OutDir>$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeOutput>CMPS_619_Game.nds</NMakeOutput>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <IncludePath>$(ProjectDir)include;c:\devkitPro\libnds\include;$(IncludePath)</IncludePath>
+    <NMakeBuildCommandLine>make clean
+make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>make clean
+make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <SourcePath>$(ProjectDir)source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeOutput>CMPS_619_Game.nds</NMakeOutput>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <IncludePath>$(ProjectDir)\include;c:\devkitPro\libnds\include;$(IncludePath)</IncludePath>
+    <NMakeBuildCommandLine>make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>make clean
+make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\GameEngine.cpp" />
+    <ClCompile Include="source\GameObjectManager.cpp" />
+    <ClCompile Include="source\GameStateManager.cpp" />
+    <ClCompile Include="source\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\FSM.h" />
+    <ClInclude Include="include\FSMState.h" />
+    <ClInclude Include="include\GameEngine.h" />
+    <ClInclude Include="include\GameObject.h" />
+    <ClInclude Include="include\GameObjectManager.h" />
+    <ClInclude Include="include\GameState.h" />
+    <ClInclude Include="include\GameStateManager.h" />
+    <ClInclude Include="include\GameStd.h" />
+    <ClInclude Include="include\IGameComponent.h" />
+    <ClInclude Include="include\IGameEngine.h" />
+    <ClInclude Include="include\IGameObjectManager.h" />
+    <ClInclude Include="include\IGameStateManager.h" />
+    <ClInclude Include="include\temp.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
