@@ -61,7 +61,6 @@ make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReB
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="Makefile" />
-    <None Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\GameEngine.cpp" />
@@ -70,6 +69,8 @@ make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReB
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AlarmObject.h" />
+    <ClInclude Include="include\AlarmSystem.h" />
     <ClInclude Include="include\FSM.h" />
     <ClInclude Include="include\FSMState.h" />
     <ClInclude Include="include\GameEngine.h" />
