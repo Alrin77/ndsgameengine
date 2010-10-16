@@ -37,6 +37,12 @@
     <Filter Include="Header Files\Alarms">
       <UniqueIdentifier>{f73cbff7-d2dd-4eb2-a6d8-53ca8ca1174b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameStates">
+      <UniqueIdentifier>{6b72b207-7468-4a57-84f7-5c5046fcb37f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameStates">
+      <UniqueIdentifier>{9453bd24-376e-4a63-b53f-3ffe17b6a749}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
