@@ -34,9 +34,11 @@
     <Filter Include="Source Files\Manager-GameObject">
       <UniqueIdentifier>{3fa0fda3-044e-4bd2-bb16-2f1f9854bfb7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Alarms">
+      <UniqueIdentifier>{f73cbff7-d2dd-4eb2-a6d8-53ca8ca1174b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="readme.txt" />
     <None Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +94,12 @@
     </ClInclude>
     <ClInclude Include="include\IGameObjectManager.h">
       <Filter>Header Files\Manager-GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AlarmObject.h">
+      <Filter>Header Files\Alarms</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AlarmSystem.h">
+      <Filter>Header Files\Alarms</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
