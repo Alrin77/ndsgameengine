@@ -17,7 +17,7 @@ class FSMState{
 
 public:
 	//Returns the FSM which is managing this state
-	interfaceType * Machine(){
+	interfaceType* Machine(){
 		return _machine;
 	}
 

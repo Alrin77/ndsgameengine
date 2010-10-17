@@ -4,7 +4,7 @@
 #include <stack>
 #include "FSM.h"
 #include "GameState.h"
-#include "IGameComponent.h"
+#include "IGameManager.h"
 
 //Game state management, provides functionality for switching between game states
 class GameStateManager : public IGameStateManager, public FSM<GameState, IGameStateManager>{

@@ -8,5 +8,5 @@
 #include "GameState.h"
 #include "GameStateManager.h"
 #include "IGameStateManager.h"
-#include "IGameComponent.h"
+#include "IGameManager.h"
 #include "IGameEngine.h"

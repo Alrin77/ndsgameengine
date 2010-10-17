@@ -1,6 +1,7 @@
 #pragma once
 
 #include "IGameEngine.h"
+#include "GameServices.h"
 #include "GameStateManager.h"
 #include "GameObjectManager.h"
 #include <vector>

@@ -65,7 +65,13 @@ make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReB
   <ItemGroup>
     <ClCompile Include="source\GameEngine.cpp" />
     <ClCompile Include="source\GameObjectManager.cpp" />
+    <ClCompile Include="source\GameServices.cpp" />
+    <ClCompile Include="source\GameStateCredits.cpp" />
+    <ClCompile Include="source\GameStateIntro.cpp" />
     <ClCompile Include="source\GameStateManager.cpp" />
+    <ClCompile Include="source\GameStateOptions.cpp" />
+    <ClCompile Include="source\GameStatePlay.cpp" />
+    <ClCompile Include="source\GameStateSetup.cpp" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -76,11 +82,17 @@ make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReB
     <ClInclude Include="include\GameEngine.h" />
     <ClInclude Include="include\GameObject.h" />
     <ClInclude Include="include\GameObjectManager.h" />
+    <ClInclude Include="include\GameServices.h" />
     <ClInclude Include="include\GameState.h" />
+    <ClInclude Include="include\GameStateCredits.h" />
+    <ClInclude Include="include\GameStateIntro.h" />
     <ClInclude Include="include\GameStateManager.h" />
+    <ClInclude Include="include\GameStateOptions.h" />
+    <ClInclude Include="include\GameStatePlay.h" />
+    <ClInclude Include="include\GameStateSetup.h" />
     <ClInclude Include="include\GameStd.h" />
-    <ClInclude Include="include\IGameComponent.h" />
     <ClInclude Include="include\IGameEngine.h" />
+    <ClInclude Include="include\IGameManager.h" />
     <ClInclude Include="include\IGameObjectManager.h" />
     <ClInclude Include="include\IGameStateManager.h" />
     <ClInclude Include="include\temp.h" />
