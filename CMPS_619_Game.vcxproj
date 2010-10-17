@@ -70,6 +70,7 @@ make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReB
     <ClCompile Include="source\GameStateIntro.cpp" />
     <ClCompile Include="source\GameStateManager.cpp" />
     <ClCompile Include="source\GameStateOptions.cpp" />
+    <ClCompile Include="source\GameStatePause.cpp" />
     <ClCompile Include="source\GameStatePlay.cpp" />
     <ClCompile Include="source\GameStateSetup.cpp" />
     <ClCompile Include="source\main.cpp" />
@@ -88,6 +89,7 @@ make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReB
     <ClInclude Include="include\GameStateIntro.h" />
     <ClInclude Include="include\GameStateManager.h" />
     <ClInclude Include="include\GameStateOptions.h" />
+    <ClInclude Include="include\GameStatePause.h" />
     <ClInclude Include="include\GameStatePlay.h" />
     <ClInclude Include="include\GameStateSetup.h" />
     <ClInclude Include="include\GameStd.h" />
