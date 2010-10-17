@@ -1,6 +1,7 @@
 #pragma once
 
 #include <nds.h>
+#include "GameServices.h"
 #include "IGameEngine.h"
 #include "IGameStateManager.h"
 #include "IGameObjectManager.h"

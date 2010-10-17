@@ -31,7 +31,7 @@ public:
 
 	//Remove top state and move it to dead state list
 	virtual bool PopState(){
-		if(_stateStack->empty())
+		if(StackIsEmpty())
 			return false;
 
 		ClearDeadState();
