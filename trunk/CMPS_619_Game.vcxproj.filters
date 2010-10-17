@@ -84,6 +84,9 @@
     <ClCompile Include="source\GameStateSetup.cpp">
       <Filter>Source Files\Manager-GameState\GameStates</Filter>
     </ClCompile>
+    <ClCompile Include="source\GameStatePause.cpp">
+      <Filter>Source Files\Manager-GameState\GameStates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GameEngine.h">
@@ -145,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="include\GameServices.h">
       <Filter>Header Files\Manager-GameServices</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameStatePause.h">
+      <Filter>Header Files\Manager-GameState\GameStates</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

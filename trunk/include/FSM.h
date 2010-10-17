@@ -70,6 +70,11 @@ protected:
 		if(StackIsEmpty())
 			return;
 
+		/*
+		The purpose of saving the top state in tempState is so that while we are
+		  in the top state we are not deleted.  Hence the current top state is
+		  put as the _deadState at the end of this function call.
+		*/
 		FSMState<stateType, interfaceType>* tempState = _stateStack->top();
 		_stateStack->pop();
 		while(PopState());

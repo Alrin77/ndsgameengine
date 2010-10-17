@@ -27,15 +27,15 @@ void GameStateManager::Cleanup(){
 	}
 }
 
-void GameStateManager::PushState(GameState* newState){
-	newState->Initialize();
-	FSM<GameState,IGameStateManager>::PushState(newState);
+void GameStateManager::PushState(int StateToPush){
+	FSM<GameState,IGameStateManager>::PushState(getGameState(StateToPush));
+	TopState()->Initialize();
 }
 
-void GameStateManager::ChangeState(GameState* newState, bool clearStack = false){
+void GameStateManager::ChangeState(int newState, bool clearStack = false){
 	TopState()->Cleanup();
-	newState->Initialize();
-	FSM<GameState,IGameStateManager>::ChangeState(newState, clearStack);
+	FSM<GameState,IGameStateManager>::ChangeState(getGameState(newState), clearStack);
+	TopState()->Initialize();
 }
 
 bool GameStateManager::PopState(){
@@ -45,4 +45,22 @@ bool GameStateManager::PopState(){
 
 GameState* GameStateManager::TopState(){
 	return FSM<GameState, IGameStateManager>::TopState();
+}
+
+
+GameState* GameStateManager::getGameState(int GameToGet){
+	switch (GameToGet){
+		case STATE_INTRO:
+			return new GameStateIntro();
+		case STATE_OPTIONS:
+			return new GameStateOptions();
+		case STATE_SETUP:
+			return new GameStateSetup();
+		case STATE_PLAY:
+			return new GameStatePlay();
+		case STATE_CREDIT:
+			return new GameStateCredits();
+		case STATE_PAUSE:
+			return new GameStatePause();
+	}
 }

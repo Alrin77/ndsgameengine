@@ -1,5 +1,4 @@
 #include "GameEngine.h"
-#include "GameStateIntro.h"
 
 IGameEngine* GameEngine::_gameEngine;
 
@@ -19,7 +18,7 @@ void GameEngine::Run(){
 	//***********************GET RID OF ME
 
 	_gcList->push_back(GameStateManager::getSingleton());
-	GameStateManager::getSingleton()->PushState(new GameStateIntro());
+	GameStateManager::getSingleton()->PushState(STATE_INTRO);
 	_gcList->push_back(GameObjectManager::getSingleton());
 	Initialize();
 	while(_running){
