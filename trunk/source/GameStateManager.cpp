@@ -28,14 +28,18 @@ void GameStateManager::Cleanup(){
 }
 
 void GameStateManager::PushState(GameState* newState){
+	newState->Initialize();
 	FSM<GameState,IGameStateManager>::PushState(newState);
 }
 
-void GameStateManager::ChangeState(GameState* newState){
-	FSM<GameState,IGameStateManager>::ChangeState(newState);
+void GameStateManager::ChangeState(GameState* newState, bool clearStack = false){
+	TopState()->Cleanup();
+	newState->Initialize();
+	FSM<GameState,IGameStateManager>::ChangeState(newState, clearStack);
 }
 
 bool GameStateManager::PopState(){
+	TopState()->Cleanup();
 	FSM<GameState,IGameStateManager>::PopState();
 }
 

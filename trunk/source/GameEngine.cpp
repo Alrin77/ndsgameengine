@@ -1,5 +1,5 @@
 #include "GameEngine.h"
-#include "temp.h"
+#include "GameStateIntro.h"
 
 IGameEngine* GameEngine::_gameEngine;
 
@@ -18,8 +18,9 @@ void GameEngine::Run(){
 	vramSetBankA(VRAM_A_LCD);
 	//***********************GET RID OF ME
 
-	//_gcList->push_back(GameStateManager::getSingleton());
-	_gcList->push_back(GameServices::GameObjectManager());
+	_gcList->push_back(GameStateManager::getSingleton());
+	GameStateManager::getSingleton()->PushState(new GameStateIntro());
+	_gcList->push_back(GameObjectManager::getSingleton());
 	Initialize();
 	while(_running){
 		Update();
@@ -43,9 +44,6 @@ void GameEngine::Update(){
 }
 
 void GameEngine::Draw(){
-	//***********************GET RID OF ME
-	pixel(rand() % 256, rand() % 192, RGB15(rand()%31, rand()%31, rand()%31));
-	//***********************GET RID OF ME
 	for(std::vector<IGameManager*>::iterator it = _gcList->begin(); it != _gcList->end(); it++)
 		(*it)->Draw();
 }

@@ -1,5 +1,4 @@
 #include "GameObjectManager.h"
-#include "temp.h"
 
 IGameObjectManager* GameObjectManager::_gameObjectManager;
 
@@ -21,10 +20,6 @@ void GameObjectManager::Initialize(){
 }
 
 void GameObjectManager::Update(){
-	//***********************GET RID OF ME
-	pixel(rand() % 256, rand() % 192, RGB15(rand()%31, rand()%31, rand()%31));
-	//***********************GET RID OF ME
-
 	for(_objectIterator = _gameObjectMap->begin(); _objectIterator != _gameObjectMap->end(); _objectIterator++)
 		(*_objectIterator).second->Update();
 

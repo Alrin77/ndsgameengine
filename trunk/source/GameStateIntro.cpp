@@ -1,22 +1,32 @@
 #include "GameStateIntro.h"
 
-GameStateIntro::GameStateIntro(IGameStateManager* machine){
-	this->SetManager(machine);
+GameStateIntro::GameStateIntro(){
 }
 
 GameStateIntro::~GameStateIntro(){
-	this->SetManager(NULL);
 }
 
+void GameStateIntro::Initialize(){
+	for(int x = 0; x < 500; x++)
+	//***********************GET RID OF ME
+	pixel(rand() % 256, rand() % 192, RGB15(rand()%31, rand()%31, rand()%31));
+	//****************
+}
 
-void GameStateIntro::Initialize(){}
+void GameStateIntro::Update(){
+}
 
-void GameStateIntro::Update(){}
+void GameStateIntro::Draw(){
+	////***********************GET RID OF ME
+	//pixel(rand() % 256, rand() % 192, RGB15(rand()%31, rand()%31, rand()%31));
+	////***********************GET RID OF ME
+}
 
-void GameStateIntro::Draw(){}
+void GameStateIntro::Cleanup(){
+}
 
-void GameStateIntro::Cleanup(){}
+void GameStateIntro::Pause(){
+}
 
-void GameStateIntro::Pause(){}
-
-void GameStateIntro::Resume(){}
+void GameStateIntro::Resume(){
+}

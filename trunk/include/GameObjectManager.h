@@ -2,8 +2,7 @@
 
 #include <vector>
 #include <ext/hash_map>
-#include "IGameManager.h"
-#include "IGameObjectManager.h"
+#include "GameStd.h"
 #include "GameObject.h"
 
 class GameObjectManager : public IGameObjectManager{

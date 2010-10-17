@@ -7,11 +7,11 @@ public:
 	GameStatePlay();
 	~GameStatePlay();
 
-	/*void Initialize();
+	void Initialize();
 	void Update();
 	void Draw();
 	void Cleanup();
 	void Pause();
-	void Resume();*/
+	void Resume();
 };
 

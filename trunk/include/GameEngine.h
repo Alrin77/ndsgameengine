@@ -1,11 +1,10 @@
 #pragma once
 
-#include "IGameEngine.h"
+#include "GameStd.h"
 #include "GameServices.h"
 #include "GameStateManager.h"
 #include "GameObjectManager.h"
-#include <vector>
-#include <nds.h>
+
 
 class GameEngine : public IGameEngine{
 public:
