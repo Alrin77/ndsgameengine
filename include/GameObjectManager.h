@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <ext/hash_map>
-#include "IGameComponent.h"
+#include "IGameManager.h"
 #include "IGameObjectManager.h"
 #include "GameObject.h"
 

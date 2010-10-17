@@ -19,7 +19,7 @@ void GameEngine::Run(){
 	//***********************GET RID OF ME
 
 	//_gcList->push_back(GameStateManager::getSingleton());
-	_gcList->push_back(GameObjectManager::getSingleton());
+	_gcList->push_back(GameServices::GameObjectManager());
 	Initialize();
 	while(_running){
 		Update();

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IGameComponent.h"
+#include "IGameManager.h"
 
 class GameState;
 

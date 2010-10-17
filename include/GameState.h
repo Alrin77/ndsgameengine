@@ -1,7 +1,7 @@
 #pragma once
 
 #include "FSMState.h"
-#include "IGameComponent.h"
+#include "IGameManager.h"
 #include "IGameStateManager.h"
 
 class GameStateManager;

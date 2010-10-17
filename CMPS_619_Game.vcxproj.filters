@@ -37,11 +37,17 @@
     <Filter Include="Header Files\Alarms">
       <UniqueIdentifier>{f73cbff7-d2dd-4eb2-a6d8-53ca8ca1174b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\GameStates">
-      <UniqueIdentifier>{6b72b207-7468-4a57-84f7-5c5046fcb37f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\GameStates">
+    <Filter Include="Header Files\Manager-GameState\GameStates">
       <UniqueIdentifier>{9453bd24-376e-4a63-b53f-3ffe17b6a749}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Manager-GameServices">
+      <UniqueIdentifier>{4bdb4997-440d-4d43-818d-bd2fca2e846c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Manager-GameServices">
+      <UniqueIdentifier>{53101601-17ad-4d7d-a2c0-bdeb45dbf5c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Manager-GameState\GameStates">
+      <UniqueIdentifier>{6b72b207-7468-4a57-84f7-5c5046fcb37f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -60,12 +66,27 @@
     <ClCompile Include="source\GameObjectManager.cpp">
       <Filter>Source Files\Manager-GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="source\GameServices.cpp">
+      <Filter>Source Files\Manager-GameServices</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameStateCredits.cpp">
+      <Filter>Source Files\Manager-GameState\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameStateIntro.cpp">
+      <Filter>Source Files\Manager-GameState\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameStateOptions.cpp">
+      <Filter>Source Files\Manager-GameState\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameStatePlay.cpp">
+      <Filter>Source Files\Manager-GameState\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameStateSetup.cpp">
+      <Filter>Source Files\Manager-GameState\GameStates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GameEngine.h">
-      <Filter>Header Files\GameEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="include\IGameComponent.h">
       <Filter>Header Files\GameEngine</Filter>
     </ClInclude>
     <ClInclude Include="include\FSM.h">
@@ -106,6 +127,27 @@
     </ClInclude>
     <ClInclude Include="include\AlarmSystem.h">
       <Filter>Header Files\Alarms</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IGameManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameStateCredits.h">
+      <Filter>Header Files\Manager-GameState\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameStateIntro.h">
+      <Filter>Header Files\Manager-GameState\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameStateOptions.h">
+      <Filter>Header Files\Manager-GameState\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameStatePlay.h">
+      <Filter>Header Files\Manager-GameState\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameStateSetup.h">
+      <Filter>Header Files\Manager-GameState\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameServices.h">
+      <Filter>Header Files\Manager-GameServices</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
