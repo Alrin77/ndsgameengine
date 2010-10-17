@@ -95,9 +95,6 @@
     <ClInclude Include="include\FSMState.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
-    <ClInclude Include="include\temp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\GameState.h">
       <Filter>Header Files\Manager-GameState</Filter>
     </ClInclude>

@@ -5,7 +5,7 @@ class GameStateManager;
 
 class GameStateIntro : public GameState{
 public:
-	GameStateIntro(IGameStateManager* machine);
+	GameStateIntro();
 	~GameStateIntro();
 
 	void Initialize();

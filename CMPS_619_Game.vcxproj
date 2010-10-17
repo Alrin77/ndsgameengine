@@ -95,7 +95,6 @@ make -r 2&gt;&amp;1 | sed -e 's/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/'</NMakeReB
     <ClInclude Include="include\IGameManager.h" />
     <ClInclude Include="include\IGameObjectManager.h" />
     <ClInclude Include="include\IGameStateManager.h" />
-    <ClInclude Include="include\temp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

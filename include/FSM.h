@@ -22,7 +22,7 @@ public:
 	//Remove top state and push a new state onto the stack
 	//send true for second parameter to remove all states from the stack
 	virtual void ChangeState(stateType* newState, bool clearStack = false){
-		if(clearStack) 
+		if(!clearStack) 
 			PopState();
 		else 
 			EmptyStateStack();
@@ -62,7 +62,7 @@ protected:
 
 	//Returns if the state stack is currently empty
 	const bool StackIsEmpty(){
-		return _stateStack->empty();
+		return _stateStack->size() > 0;
 	}
 
 	//Empties the entire state stack

@@ -1,12 +1,9 @@
 #pragma once
 
 #include <nds.h>
-#include <vector>
-#include <stack>
-#include "FSM.h"
-#include "FSMState.h"
-#include "GameState.h"
-#include "GameStateManager.h"
-#include "IGameStateManager.h"
-#include "IGameManager.h"
 #include "IGameEngine.h"
+#include "IGameStateManager.h"
+#include "IGameObjectManager.h"
+
+static inline void pixel(int x, int y, int clr)
+{   VRAM_A[y*256+x] = clr;    }

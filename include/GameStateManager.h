@@ -13,7 +13,7 @@ public:
 	virtual ~GameStateManager();
 
 	void PushState(GameState* newState);
-	void ChangeState(GameState* newState);
+	void ChangeState(GameState* newState, bool clearStack);
 	bool PopState();
 	GameState* TopState();
 
