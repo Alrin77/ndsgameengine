@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Header Files\GameEngine">
       <UniqueIdentifier>{f735ef12-a999-4865-961a-9637ce13460f}</UniqueIdentifier>
     </Filter>
@@ -48,6 +44,16 @@
     </Filter>
     <Filter Include="Source Files\Manager-GameState\GameStates">
       <UniqueIdentifier>{6b72b207-7468-4a57-84f7-5c5046fcb37f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Manager-Input">
+      <UniqueIdentifier>{f39fb285-fac8-4b1a-9389-0a8a274b30eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Manager-Input">
+      <UniqueIdentifier>{cf88e98f-ec41-4b97-b478-1a3e871049d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="source\GameStatePause.cpp">
       <Filter>Source Files\Manager-GameState\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="source\InputManager.cpp">
+      <Filter>Source Files\Manager-Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +160,12 @@
     </ClInclude>
     <ClInclude Include="include\GameStatePause.h">
       <Filter>Header Files\Manager-GameState\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IInputManager.h">
+      <Filter>Header Files\Manager-Input</Filter>
+    </ClInclude>
+    <ClInclude Include="include\InputManager.h">
+      <Filter>Header Files\Manager-Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
