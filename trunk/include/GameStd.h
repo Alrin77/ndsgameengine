@@ -5,6 +5,7 @@
 #include "IGameEngine.h"
 #include "IGameStateManager.h"
 #include "IGameObjectManager.h"
+#include "IInputManager.h"
 
 #define STATE_INTRO 0
 #define STATE_OPTIONS 1

@@ -43,8 +43,11 @@ void GameEngine::Update(){
 }
 
 void GameEngine::Draw(){
+	swiWaitForVBlank();
 	for(std::vector<IGameManager*>::iterator it = _gcList->begin(); it != _gcList->end(); it++)
 		(*it)->Draw();
+	//oamUpdate(&oamMain);
+	//oamUpdate(&oamSub);
 }
 
 void GameEngine::Cleanup(){
