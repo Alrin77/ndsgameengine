@@ -15,7 +15,6 @@ GameObjectManager::~GameObjectManager(){
 }
 
 void GameObjectManager::Initialize(){
-	Cleanup();
 	_objectIdCount = 0;
 }
 

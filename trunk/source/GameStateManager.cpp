@@ -9,7 +9,6 @@ GameStateManager::~GameStateManager(){
 }
 
 void GameStateManager::Initialize(){
-	Cleanup();
 }
 
 void GameStateManager::Update(){
