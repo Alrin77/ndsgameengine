@@ -42,9 +42,9 @@ public:
 
 	//Returns the top state on the stack
 	virtual stateType* TopState(){
-		//if(!StackIsEmpty())
-			return (stateType*)_stateStack->top();
-		//return NULL;
+		if(!StackIsEmpty())		
+			return NULL;
+		return (stateType*)_stateStack->top();
 	}
 
 protected:
@@ -62,7 +62,7 @@ protected:
 
 	//Returns if the state stack is currently empty
 	const bool StackIsEmpty(){
-		return _stateStack->size() > 0;
+		return _stateStack->size() == 0;
 	}
 
 	//Empties the entire state stack
