@@ -51,6 +51,7 @@ void GameObjectManager::Cleanup(){
 int GameObjectManager::AddObject(GameObject* newObject){
 	_gameObjectMap->insert(__gnu_cxx::pair<int, GameObject*>(++_objectIdCount, newObject));
 	newObject->_objectID = _objectIdCount;
+	newObject->Initialize();
 	return _objectIdCount;
 }
 
