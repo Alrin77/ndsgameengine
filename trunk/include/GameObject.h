@@ -11,8 +11,8 @@ public:
 	std::string GetType() {return _objectType;}
 	
 protected:
-	GameObject();
-	virtual ~GameObject();
+	GameObject(){}
+	virtual ~GameObject(){}
 
 	virtual void Initialize()=0;
 	virtual void Update()=0;
