@@ -9,11 +9,8 @@ class GameObject{
 public:
 	int GetID() {return _objectID;}	
 	std::string GetType() {return _objectType;}
-	
-protected:
-	GameObject(){}
-	virtual ~GameObject(){}
 
+protected:
 	virtual void Initialize()=0;
 	virtual void Update()=0;
 	virtual void Draw()=0;
