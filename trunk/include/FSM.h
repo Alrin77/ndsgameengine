@@ -42,7 +42,7 @@ public:
 
 	//Returns the top state on the stack
 	virtual stateType* TopState(){
-		if(!StackIsEmpty())		
+		if(StackIsEmpty())		
 			return NULL;
 		return (stateType*)_stateStack->top();
 	}
