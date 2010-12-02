@@ -24,6 +24,7 @@ void GameObjectManager::Update(){
 
 	if(!_deadObjectList->empty())
 		for(_deadIterator = _deadObjectList->begin(); _deadIterator != _deadObjectList->end();_deadIterator++){
+			_gameObjectMap->erase((*_deadIterator)->GetID());
 			(*_deadIterator)->Cleanup();
 			delete *_deadIterator;
 		}
@@ -57,7 +58,6 @@ int GameObjectManager::AddObject(GameObject* newObject){
 
 void GameObjectManager::DestroyObject(int objectID){
 	_deadObjectList->push_back(GetObjectByID(objectID));
-	_gameObjectMap->erase(objectID);
 }
 
 GameObject* GameObjectManager::GetObjectByID(int objectID){
