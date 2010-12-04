@@ -3,6 +3,7 @@
 #include <stack>
 #include <vector>
 #include "FSMState.h"
+#include "GameStd.h"
 
 //templated implementation of a simple stack based finite state machine.
 //first template parameter is the states which will be managed by this FSM. This type
@@ -23,10 +24,10 @@ public:
 	//send true for second parameter to remove all states from the stack
 	virtual void ChangeState(stateType* newState, bool clearStack = false){
 		if(!clearStack) 
-			PopState();
+			FSM<stateType, interfaceType>::PopState();
 		else 
 			EmptyStateStack();
-		PushState(newState);
+		FSM<stateType, interfaceType>::PushState(newState);
 	}
 
 	//Remove top state and move it to dead state list
@@ -42,7 +43,7 @@ public:
 
 	//Returns the top state on the stack
 	virtual stateType* TopState(){
-		if(StackIsEmpty())		
+		if(StackIsEmpty())
 			return NULL;
 		return (stateType*)_stateStack->top();
 	}

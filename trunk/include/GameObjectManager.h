@@ -1,49 +1,63 @@
 #pragma once
 
-#include <vector>
-#include <ext/hash_map>
 #include "GameStd.h"
 #include "GameObject.h"
 
+//Class to manage the actions of game objects
 class GameObjectManager : public IGameObjectManager{
-	friend class GameEngine;
+	friend class GameEngine;	//allows the game engine to access protected members
 
 public:
-	~GameObjectManager();
+	//add an object to the manager. returns a unique identifier for the object
+	u32 AddObject(GameObject* newObject);
+	
+	//destroy an object
+	void DestroyObject(u32 objectID);
 
-	int AddObject(GameObject* newObject);
-	void DestroyObject(int objectID);
-	GameObject* GetObjectByID(int objectID);
+	//returns an object type by its unique identifier
+	u32 GetObjectTypeByID(u32 objectID);
 
+	//retreive an object by its unique identifier
+	GameObject* GetObjectByID(u32 objectID);
+
+	//singleton class, single instance and static access
 	static IGameObjectManager* getSingleton(){
 		if(!_gameObjectManager)
 			_gameObjectManager = new GameObjectManager();
 		return _gameObjectManager;
 	}
 
-protected:
-	GameObjectManager();
+	void DestroyAllObjects();
 
+protected:
+	//protected constructor and destructor enforces singleton
+	GameObjectManager();
+	~GameObjectManager();
+
+	//singleton instance of this class
 	static IGameObjectManager* _gameObjectManager;
 
+	//initialize the manager
 	void Initialize();
+
+	//update all game objects
 	void Update();
+
+	//draw all game objects
 	void Draw();
+
+	//destroy all objects
 	void Cleanup();
 	
-	
 private:
-	struct intCompare{
-		bool operator()(const int p1, const int p2) const{
-			return p1 == p2;
-		}
-	};
 
-	__gnu_cxx::hash_map<int, GameObject*, __gnu_cxx::hash<int>, intCompare>* _gameObjectMap;
-	__gnu_cxx::hash_map<int, GameObject*, __gnu_cxx::hash<int>, intCompare>::iterator _objectIterator;
+	//maps unique object identifiers to the game object
+	__gnu_cxx::hash_map<u32, GameObject*, __gnu_cxx::hash<u32>, intCompare>* _gameObjectMap;
+	__gnu_cxx::hash_map<u32, GameObject*, __gnu_cxx::hash<u32>, intCompare>::iterator _objectIterator;
 	
+	//list of dead objects
 	std::vector<GameObject*>* _deadObjectList;
 	std::vector<GameObject*>::iterator _deadIterator;
 
-	int _objectIdCount;
+	u32 _objectIdCount;
 };

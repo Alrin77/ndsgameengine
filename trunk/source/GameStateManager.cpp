@@ -9,9 +9,12 @@ GameStateManager::~GameStateManager(){
 }
 
 void GameStateManager::Initialize(){
+	//Cleanup();
+	PushState(STATE_INTRO);
 }
 
 void GameStateManager::Update(){
+	ClearDeadState();
 	TopState()->Update();
 }
 
@@ -20,32 +23,38 @@ void GameStateManager::Draw(){
 }
 
 void GameStateManager::Cleanup(){
-	while(!StackIsEmpty()){
-		TopState()->Cleanup();
+	while(!StackIsEmpty())
+
 		PopState();
-	}
 }
 
+
 void GameStateManager::PushState(int StateToPush){
+	if(TopState() != NULL)
+		TopState()->Pause();
 	FSM<GameState,IGameStateManager>::PushState(getGameState(StateToPush));
 	TopState()->Initialize();
 }
 
 void GameStateManager::ChangeState(int newState, bool clearStack = false){
-	TopState()->Cleanup();
+	if(TopState() != NULL)
+		TopState()->Cleanup();
 	FSM<GameState,IGameStateManager>::ChangeState(getGameState(newState), clearStack);
 	TopState()->Initialize();
 }
 
 bool GameStateManager::PopState(){
-	TopState()->Cleanup();
+	if(TopState() != NULL)
+		TopState()->Cleanup();
 	FSM<GameState,IGameStateManager>::PopState();
+	if(TopState() != NULL)
+		TopState()->Resume();
+	return true;
 }
 
 GameState* GameStateManager::TopState(){
 	return FSM<GameState, IGameStateManager>::TopState();
 }
-
 
 GameState* GameStateManager::getGameState(int GameToGet){
 	switch (GameToGet){
